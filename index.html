@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小松高校 PC研究会 公式ポータル</title>
+    <style>
+        /* 全体のリセットと基本スタイル */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0f172a;
+        }
+
+        .logo span {
+            color: #3b82f6;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 140px 20px 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #ef4444;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* コンテンツ共通 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+
+        /* 特徴セクション（楽しい部活） */
+        .intro-box {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+        }
+
+        .intro-box h3 {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin-bottom: 15px;
+        }
+
+        /* プロジェクト（3カラム） */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1xl));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #3b82f6;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .paypay-tag {
+            display: inline-block;
+            background-color: #ff0033;
+            color: white;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #0f172a;
+            color: #8492a6;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">小松高校 <span>PC研究会</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <span class="badge">絶賛開発中！</span>
+        <h1>技術で学校を、地域を、もっとおもしろく。</h1>
+        <p>小松高校PC研究会は、プログラミングスキルを活かしてリアルに挑戦する部活です。</p>
+    </section>
+
+    <main class="container">
+        
+        <div class="intro-box">
+            <h3>とにかく「楽しい」がモットーの部活です！</h3>
+            <p>先輩・後輩の垣根がなく、自分の「作りたい」「やってみたい」をカタチにできる自由な雰囲気が魅力。パソコン初心者からガチプログラマーまで、みんなでワイワイ活動しています！</p>
+        </div>
+
+        <h2>主な活動プロジェクト</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>購買モバイルオーダーシステム</h3>
+                <p>混雑するお昼の購買をスムーズに！自分たちの手でスマホから注文できるシステムを本格開発しています。現在、スムーズな決済のために<strong>PayPay（ペイペイ）の導入</strong>を進めています！</p>
+                <span class="paypay-tag">PayPay導入中</span>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧒</div>
+                <h3>小学生向けプログラミング教室</h3>
+                <p>地域貢献活動として、地域の小学生を対象にしたプログラミング教室を企画・開催！「教えることで自分たちも学ぶ」を実践し、モノづくりの楽しさを子どもたちに伝えています。</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>サイエンスヒルズでの外部活動</h3>
+                <p>学校を飛び出し、小松市の科学館「サイエンスヒルズこまつ」でも活動を行っています！最先端の環境や広いスペースを利用して、イベントの実施や技術発信にチャレンジしています。</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 小松高校 PC研究会. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
